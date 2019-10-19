@@ -1,0 +1,328 @@
+<div class="container mt-5">
+    <div class="mx-auto d-block">
+        <div class="card">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+
+                <div class="container">
+                    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <h4 class="text-center" alt="Simple">Overall Rating</h4>
+                            <div class="row">
+                                <div class="d-block mx-auto radio-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="overallRating"
+                                        id="inlineRadio1" value="1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="overallRating"
+                                        id="inlineRadio2" value="2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="overallRating"
+                                        id="inlineRadio3" value="3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="overallRating"
+                                        id="inlineRadio4" value="4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="overallRating"
+                                        id="inlineRadio5" value="5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row align-items-center">
+                            <label for="title" class="col-2 col-form-label">Title</label>
+                            <input type="text" class="col form-control" formControlName="title" />
+                        </div>
+                        <div class="form-group row">
+                            <label class="sr-only" for="specialization">Specialization</label>
+                            <div class="col">
+                                <select class="form-control" formControlName="specialization">
+                                    <option disabled>Specialization</option>
+                                    <option value="adult intensivist">Adult Intensivist</option>
+                                    <option value="allergy">Allergy</option>
+                                    <option value="anesthesia">Anesthesia</option>
+                                    <option value="bariatric medicine/surgery">Bariatric Medicine/Surgery</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <div class="d-block mx-auto radio-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="specializationRating"
+                                        id="inlineRadio1" value="1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="specializationRating"
+                                        id="inlineRadio2" value="2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="specializationRating"
+                                        id="inlineRadio3" value="3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="specializationRating"
+                                        id="inlineRadio4" value="4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="specializationRating"
+                                        id="inlineRadio5" value="5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row align-items-center">
+                            <label for="staffRating" class="col col-form-label rating-label">
+                                Responsiveness of hospital staff?
+                            </label>
+                            <div class="col">
+                                <div class="d-block mx-auto radio-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="staffResponsiveness"
+                                        id="inlineRadio1" value="1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="staffResponsiveness"
+                                        id="inlineRadio2" value="2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="staffResponsiveness"
+                                        id="inlineRadio3" value="3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="staffResponsiveness"
+                                        id="inlineRadio4" value="4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="staffResponsiveness"
+                                        id="inlineRadio5" value="5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group row align-items-center">
+                            <label for="doctorsRating" class="col col-form-label rating-label">
+                                Communication with doctors?
+                            </label>
+                            <div class="col">
+                                <div class="d-block mx-auto radio-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="doctorCommunication"
+                                        id="inlineRadio1" value="1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="doctorCommunication"
+                                        id="inlineRadio2" value="2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="doctorCommunication"
+                                        id="inlineRadio3" value="3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="doctorCommunication"
+                                        id="inlineRadio4" value="4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="doctorCommunication"
+                                        id="inlineRadio5" value="5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row align-items-center">
+                            <label for="nursesRating" class="col col-form-label label-center">
+                                Communication with nurses?
+                            </label>
+                            <div class="col">
+                                <div class="d-block mx-auto radio-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="nurseCommunication"
+                                        id="inlineRadio1" value="1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="nurseCommunication"
+                                        id="inlineRadio2" value="2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="nurseCommunication"
+                                        id="inlineRadio3" value="3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="nurseCommunication"
+                                        id="inlineRadio4" value="4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="nurseCommunication"
+                                        id="inlineRadio5" value="5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row align-items-center">
+                            <label for="medicationRating" class="col col-form-label">
+                                Communication about medications?
+                            </label>
+                            <div class="col">
+                                <div class="d-block mx-auto radio-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="medicationCommunication"
+                                        id="inlineRadio1" value="1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="medicationCommunication"
+                                        id="inlineRadio2" value="2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="medicationCommunication"
+                                        id="inlineRadio3" value="3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="medicationCommunication"
+                                        id="inlineRadio4" value="4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="medicationCommunication"
+                                        id="inlineRadio5" value="5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row align-items-center">
+                            <label for="optionsRating" class="col col-form-label">
+                                Options/recommendations provided?
+                            </label>
+                            <div class="col">
+                                <div class="d-block mx-auto radio-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="options"
+                                        id="inlineRadio1" value="1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="options"
+                                        id="inlineRadio2" value="2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="options"
+                                        id="inlineRadio3" value="3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="options"
+                                        id="inlineRadio4" value="4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="options"
+                                        id="inlineRadio5" value="5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row align-items-center">
+                            <label for="recommendRating" class="col col-form-label">
+                                Willingness to recomend this hospital?
+                            </label>
+                            <div class="col">
+                                <div class="d-block mx-auto radio-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="recommendations"
+                                        id="inlineRadio1" value="1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="recommendations"
+                                        id="inlineRadio2" value="2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="recommendations"
+                                        id="inlineRadio3" value="3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="recommendations"
+                                        id="inlineRadio4" value="4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="recommendations"
+                                        id="inlineRadio5" value="5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="reviewText">Write a review</label>
+                            <textarea class="form-control" id="reviewText" formControlName="body" rows="4"
+                                placeholder="Optional"></textarea>
+                        </div>
+
+
+                        <button class="btn btn-success ml-2" [disabled]="!myForm.valid">
+                            Submit Review
+                        </button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

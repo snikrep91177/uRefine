@@ -1,0 +1,14 @@
+.d-block {
+    width: 35%;
+}
+
+.o-box {
+    background-color:#74d1fe;;
+    opacity: .8;
+    color: white;
+    border-radius: 
+    calc(0.25rem - 1px)
+    calc(0.25rem - 1px)
+    calc(0.25rem - 1px)
+    calc(0.25rem - 1px);
+}

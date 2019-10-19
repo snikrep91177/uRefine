@@ -1,0 +1,25 @@
+server:
+  port: 8765
+  
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    
+spring:
+  application:
+    name: review-zuul
+    
+    
+zuul:
+  routes:
+    getUsers:
+      path: /auth/allUsers
+      service-id: auth-service
+      strip-prefix: false
+    postReview:
+      path: /reviews/postReview
+      service-id: review-service
+      strip-prefix: false
+  host:
+    socket-timeout-millis: 60000

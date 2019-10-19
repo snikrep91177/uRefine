@@ -1,0 +1,46 @@
+<div class="d-block mx-auto" style="width: 127px">
+    <button routerLink="/reviewForm" class="btn btn-outline-primary btn-link mt-5">Create Review</button>
+</div>
+<div class="container mt-5">
+    <div class="mx-auto d-block">
+        <div class="card text-center mb-3">
+            <!-- *ngFor="let r of reviews"> -->
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h3>{{r.hospitalName}}</h3>
+                    </div>
+                    <div class="col">
+                        <h5>{{r.overallRating}}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Hospital name goes here.</h5>
+                <p class="card-text">An example of a submitted hospital review.</p>
+            </div>
+            <div class="card-footer text-muted">
+                {{submitDate | date}}
+            </div>
+        </div>
+        <div class="card text-center mb-3">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h4>Title</h4>
+                    </div>
+                    <div class="col">
+                        <h5>Firstname (L)ast initial</h5>
+                    </div>
+                </div>
+            </div>Overall Rating coming soon...
+            <div class="card-body">
+                <h5 class="card-title">Firstname Last initial</h5>
+                <p class="card-text">Review text goes here</p>
+            </div>
+            <div class="card-footer text-muted">
+                {{sampleDate}}
+            </div>
+        </div>
+    </div>
+</div>

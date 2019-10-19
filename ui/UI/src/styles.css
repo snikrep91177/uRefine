@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+body { 
+    background-image: url('./assets/2-washington-dc-skyline-michael-tompsett-opaque.jpg');
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-info {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);/*, 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    color: white;
+    /* background: linear-gradient(45deg, #2770a1, #73c7d0); */
+    /* border-color: #75b4c9; */
+    background-color: #185E85;
+    border-color: #17587b;
+}
+
+.btn-info:hover {
+    /* background: linear-gradient(45deg, #215f88, #66afb8); */
+    /* border-color: #679db1; */
+    background-color: #63a8c1;
+    border-color: #599dba;
+}
+
+.btn-info:active {
+    /* background: linear-gradient(45deg, #215f88, #66afb8); */
+    /* border-color: #679db1; */
+    background-color: #63a8c1;
+    border-color: #599dba;
+}
+
+.o-box {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(45deg, #2770a1, #73c7d0);
+    /* background-color: #bddee6; */
+    opacity: .8;
+    border-radius: .3rem;
+}

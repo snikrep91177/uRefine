@@ -1,0 +1,57 @@
+.d-block {
+    width: 70%;
+}
+
+.radio-center{
+    width: 15rem;
+    padding-left: 2rem;
+}
+
+.card {
+    opacity: .8;
+}
+
+.card-body {
+    background-color:#74d1fe;
+    color: white;
+}
+
+.card-header {
+    background-color: #dbf1fb;
+    color: #74d1fe;
+}
+
+.card-footer {
+    background-color: #dbf1fb;
+}
+
+.btn-secondary {
+    background-color: #74d1fe;
+    border: #74d1fe;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active {
+    background-color: #74d1fe;
+    border: #74d1fe;
+}
+
+.btn-link {
+    color: white;
+}
+
+button.btn.btn-link:hover {
+    color: white;
+}
+
+.modal-header {
+    background-color: #dbf1fb;
+    color: #74d1fe;
+}
+
+.modal-body {
+    background-color:#74d1fe;
+    color: white;
+}
+/* .modal-dialog {
+    width: 60%;
+} */

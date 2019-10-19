@@ -1,0 +1,298 @@
+<div id="hospital-name" class="p-2 o-box mx-auto mt-2">
+    <h1 class="text-center">{{hospital.name}}</h1>
+</div>
+<div class="d-block mx-auto" style="width: 127px">
+    <button data-toggle="modal" data-target="#exampleModal" class="btn btn-info mt-5">Create
+        Review</button>
+</div>
+<div *ngIf="!reviewsLen">
+    <p class="text-center mt-5 text-bold">Looks like there aren't any reviews yet. Be the first to submit one!</p>
+</div>
+<div class="container mt-5">
+    <div class="mx-auto d-block">
+        <div class="card text-center mb-3" *ngFor="let r of reviews">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h4>{{r.author.username}}</h4>
+                    </div>
+                    <div class="col">
+                        <div class="d-block mx-auto star-center">
+                            <h5 class="my-0">Overall Rating</h5>
+                            <ngb-rating class="form-control py-0" [(rate)]="r.overallRating" [readonly]="true">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{r.title}}</h5>
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="my-0">Staff Responsiveness:</h6>
+                            <div class="d-block mx-auto star-center">
+                                <ngb-rating class="form-control" [(rate)]="r.staffResponsiveness" [readonly]="true">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                            <h6 class="my-0">Doctor Communication:</h6>
+                            <div class="d-block mx-auto star-center">
+                                <ngb-rating class="form-control" [(rate)]="r.doctorCommunication" [readonly]="true">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                            <h6 class="my-0">Nurse Communication:</h6>
+                            <div class="d-block mx-auto star-center">
+                                <ngb-rating class="form-control" [(rate)]="r.nurseCommunication" [readonly]="true">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                            <h6 class="my-0">Medication Communication:</h6>
+                            <div class="d-block mx-auto star-center">
+                                <ngb-rating class="form-control" [(rate)]="r.medicationCommunication" [readonly]="true">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                            <h6 class="my-0">Option Availability:</h6>
+                            <div class="d-block mx-auto star-center">
+                                <ngb-rating class="form-control" [(rate)]="r.options" [readonly]="true">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                            <h6 class="my-0">{{r.specialization}} specialization rating:</h6>
+                            <div class="d-block mx-auto star-center">
+                                <ngb-rating class="form-control" [(rate)]="r.specializationRating" [readonly]="true">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                            <h6 class="my-0">Willingness to recommend:</h6>
+                            <div class="d-block mx-auto star-center">
+                                <ngb-rating class="form-control" [(rate)]="r.recommendations" [readonly]="true">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="card-text">{{r.body}}</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="card-footer"> -->
+                <div *ngIf="currentUser" class="card-footer">
+                    <div class="row">
+                        <div class="col">
+                            {{r.datePosted | date}}
+                        </div>
+                        <div class="col">
+                            <button (click)="upvoteReview(r)"><i class="fa fa-thumbs-up "></i></button>
+                            {{r.upvotes.length}}
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="!currentUser" class="card-footer mt-2 text-bold">
+                    <p>Log in to see and contribute to this review's score!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Submit a Review</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <!-- <div class="container"> -->
+                    <div id="form">
+                        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <h4 class="text-center" alt="Simple">Overall Rating</h4>
+                                <div class="row">
+                                    <div class="d-block mx-auto star-center">
+                                        <ngb-rating class="form-control" formControlName="overallRating"
+                                            [(rate)]="overallRating">
+                                            <ng-template let-fill="fill" let-index="index">
+                                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                            </ng-template>
+                                        </ngb-rating>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row align-items-center">
+                                <label for="title" class="col-2 col-form-label">Title</label>
+                                <input type="text" class="col form-control" formControlName="title" />
+                            </div>
+                            <div class="form-group row align-items-center">
+                                <label class="sr-only" for="specialization">Specialization</label>
+                                <div class="col">
+                                    <select class="form-control" formControlName="specialization">
+                                        <option disabled>Specialization</option>
+                                        <option *ngFor="let s of specializations" value="{{s | lowercase}}">{{s}}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <div class="d-block mx-auto star-center">
+                                        <ngb-rating class="form-control" formControlName="specializationRating"
+                                            [(rate)]="specializationRating">
+                                            <ng-template let-fill="fill" let-index="index">
+                                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                            </ng-template>
+                                        </ngb-rating>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row align-items-center">
+                                <label for="staffRating" class="col col-form-label rating-label">
+                                    Responsiveness of hospital staff?
+                                </label>
+                                <div class="col">
+                                    <div class="d-block mx-auto star-center">
+                                        <ngb-rating class="form-control" formControlName="staffResponsiveness"
+                                            [(rate)]="staffResponsiveness">
+                                            <ng-template let-fill="fill" let-index="index">
+                                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                            </ng-template>
+                                        </ngb-rating>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="form-group row align-items-center">
+                                <label for="doctorsRating" class="col col-form-label rating-label">
+                                    Communication with doctors?
+                                </label>
+                                <div class="col">
+                                    <div class="d-block mx-auto star-center">
+                                        <ngb-rating class="form-control" formControlName="doctorCommunication"
+                                            [(rate)]="doctorCommunication">
+                                            <ng-template let-fill="fill" let-index="index">
+                                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                            </ng-template>
+                                        </ngb-rating>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row align-items-center">
+                                <label for="nursesRating" class="col col-form-label label-center">
+                                    Communication with nurses?
+                                </label>
+                                <div class="col">
+                                    <div class="d-block mx-auto star-center">
+                                        <ngb-rating class="form-control" formControlName="nurseCommunication"
+                                            [(rate)]="nurseCommunication">
+                                            <ng-template let-fill="fill" let-index="index">
+                                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                            </ng-template>
+                                        </ngb-rating>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row align-items-center">
+                                <label for="medicationRating" class="col col-form-label">
+                                    Communication about medications?
+                                </label>
+                                <div class="col">
+                                    <div class="d-block mx-auto star-center">
+                                        <ngb-rating class="form-control" formControlName="medicationCommunication"
+                                            [(rate)]="medicationCommunication">
+                                            <ng-template let-fill="fill" let-index="index">
+                                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                            </ng-template>
+                                        </ngb-rating>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row align-items-center">
+                                <label for="optionsRating" class="col col-form-label">
+                                    Options and/or recommendations provided?
+                                </label>
+                                <div class="col">
+                                    <div class="d-block mx-auto star-center">
+                                        <ngb-rating class="form-control" formControlName="options" [(rate)]="options">
+                                            <ng-template let-fill="fill" let-index="index">
+                                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                            </ng-template>
+                                        </ngb-rating>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row align-items-center">
+                                <label for="recommendRating" class="col col-form-label">
+                                    Willingness to recommend this hospital?
+                                </label>
+                                <div class="col">
+                                    <div class="d-block mx-auto star-center">
+                                        <ngb-rating class="form-control" formControlName="recommendations"
+                                            [(rate)]="recommendations">
+                                            <ng-template let-fill="fill" let-index="index">
+                                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                            </ng-template>
+                                        </ngb-rating>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="reviewText">Write a review</label>
+                                <textarea class="form-control" id="reviewText" formControlName="body" rows="4"
+                                    placeholder="Optional (2,000 character limit)"></textarea>
+                            </div>
+
+                        <div *ngIf="currentUser">
+                            <label for="anonymously">Submit anonymously   </label>
+                            <input class="ml-2" id="anonymously" type="checkbox" [checked]="submitAnonymously" (change)="submitAnonymously = !submitAnonymously" />
+                        </div>
+
+
+                            <button class="btn btn-info ml-2" [disabled]="!myForm.valid">
+                                Submit Review
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,26 @@
+<div class="container mt-5">
+<!-- <div class="row fixed-top mt-2"> -->
+    <!-- <div class="col- mb-6"></div> -->
+    <!-- <div class="col-4"> -->
+        <!-- <div class="fixed-top"> -->
+            <!-- mx-auto  mb-4 -->
+            <input class="form-control fixed-top" type="search" placeholder="Enter hospital name or address" aria-label="Search"
+                [(ngModel)]="searchTerm">
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="col-2"></div> -->
+        <div class="mx-auto d-block">
+            <div class="card text-center mb-3" *ngFor="let h of filteredHospitals">
+                <div class="card-header">
+                    <a [routerLink]="['/findByHospital', h | json]">
+                        <h3>{{h.name}}</h3>
+                    </a>
+                </div>
+                <img src="{{h.img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{h.address}}</h5>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>

@@ -1,0 +1,11 @@
+.d-block{
+    width: 60%;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+
+.text-wb {
+    color: white;
+    font-weight: bold;    
+}

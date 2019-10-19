@@ -1,0 +1,25 @@
+.d-block {
+    width: 60%;
+}
+
+.card {
+    opacity: .8;
+}
+
+.card-header {
+    background-color:#74d1fe;
+    color: white;
+}
+
+.card-body {
+    background-color: #dbf1fb;
+    color: #2085ef;
+}
+
+h3 {
+    color: white;
+}
+
+a:hover {
+    color: #ffffff;
+}

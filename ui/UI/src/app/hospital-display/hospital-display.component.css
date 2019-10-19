@@ -1,0 +1,47 @@
+.d-block {
+    width: 60%;
+}
+
+input.form-control {
+    width: 30%;
+    margin-top: 10px;
+    margin-left: 60%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 0px;
+}
+
+.card-header {
+    background: linear-gradient(45deg, #2770a1, #73c7d0);
+    color: white;
+    /* background-color: #aac7d3; */
+    opacity: .8;
+}
+
+.card-footer {
+    opacity: .8;
+}
+
+.card-body {
+    background-color:#a7c0d2;
+    color: white;
+    font-weight: bold;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+h3 {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}

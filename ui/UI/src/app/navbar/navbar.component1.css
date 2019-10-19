@@ -1,0 +1,17 @@
+.active.current{
+    font-weight:bold;
+    color: #2085ef;
+}
+
+.navbar-light .navbar-brand {
+    font-weight:bold;
+    color: #2085ef;
+}
+
+nav {
+    background-color:#dbf1fb;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #2085ef;
+}

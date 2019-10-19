@@ -1,0 +1,103 @@
+.d-block {
+    width: 70%;
+}
+
+#hospital-name {
+    height: fit-content;
+    width: fit-content;
+    color: white;
+    background: linear-gradient(45deg, #2770a1, #73c7d0);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*opacity: .8;*/
+    border: 0px;
+}
+
+.card-body {
+    background-color: #aac7d3;
+    color: white;
+    font-weight: bold;
+}
+
+.card-header {
+    background: linear-gradient(45deg, #2770a1, #73c7d0);
+    /* background-color:#a7c0d2; */
+    color: white;
+}
+
+.card-footer {
+    color: white;
+    font-weight: bold;
+}
+
+.modal-dialog {
+    max-width: 50%;
+}
+
+.card-footer {
+    background-color:#a7c0d2;
+}
+
+.modal-content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);/*, 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    border: 0px;
+    /*opacity: .9; */
+}
+
+.modal-header {
+    border: 0px;
+    background: linear-gradient(45deg, #2770a1, #73c7d0);
+    /* background-color: #a7c0d2; */
+    color: white;
+}
+
+.modal-body {
+    background-image: url('../../assets/2-washington-dc-skyline-michael-tompsett-opaque.jpg');
+    background-size: cover;
+    /* background-color:#aac7d3; */
+    color: white;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3em;
+}
+
+.star {
+    font-size: 2rem;
+    color: #6f6e6e;
+}
+
+.star-center{
+    height: fit-content;
+    width: fit-content;
+    /* width: 15rem; */
+    /* padding-left: 2rem; */
+}
+
+.filled {
+    color: #17a2b8;
+}
+
+#form {
+    font-weight: bold;
+    color: #6f6e6e;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+ngb-rating.form-control {
+    height: unset;
+    border: unset;
+    background-color: unset;
+}
+
+.form-control {
+    margin-right: 3%;
+    padding-bottom: unset;
+}
+
+.form-control:focus {
+    box-shadow: unset;
+}

@@ -1,0 +1,37 @@
+.active.current{
+    font-weight:bold;
+    color: white;
+}
+
+.navbar-light .navbar-brand {
+    font-size: x-large;
+    font-weight:bold;
+    color: #e0f1f7;
+}
+
+nav {
+    /* background-image: url('../../assets/2-washington-dc-skyline-michael-tompsett-print-cropped.jpg'); */
+    background-image: url('../../assets/2-washington-dc-skyline-michael-tompsett-canvas-cropped.jpg');
+    
+    /* Center and scale the image nicely */
+    background-position-y: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* background-color:#aac7d3; */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #e0f1f7;
+    font-size: large;
+}
+
+.navbar-toggler {
+    background-color: #64bbd387;
+    border: 1px solid #356471;
+}
+
+.user-name {
+    margin-left: 50%;
+    font-weight: bolder;
+}
